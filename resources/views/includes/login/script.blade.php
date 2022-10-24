@@ -1,1 +1,1 @@
-<script src={{ asset('/js/login.js') }}></script>
+<script src={{ asset('sbadmin/js/login.js') }}></script>

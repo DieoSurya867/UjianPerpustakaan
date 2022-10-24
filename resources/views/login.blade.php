@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href={{ asset('css/login.css') }} />
+    @stack('prepend-style')
+    @include('includes.login.style')
+    @stack('addon-style')
     <title>Petugas & Siswa Login Form</title>
 </head>
 
@@ -43,7 +44,7 @@
                         Siswa
                     </button>
                 </div>
-                <img src={{ asset('img/login.svg') }} class="image" alt="" />
+                <img src={{ asset('sbadmin/img/login.svg') }} class="image" alt="" />
             </div>
             <div class="panel right-panel">
                 <div class="content">
@@ -51,12 +52,14 @@
                         Petugas
                     </button>
                 </div>
-                <img src={{ asset('img/singup.svg') }} class="image" alt="" />
+                <img src={{ asset('sbadmin/img/singup.svg') }} class="image" alt="" />
             </div>
         </div>
     </div>
 
-    <script src={{ asset('/js/login.js') }}></script>
+    @stack('prepend-script')
+    @include('includes.login.script')
+    @stack('addon-script')
 </body>
 
 </html>
